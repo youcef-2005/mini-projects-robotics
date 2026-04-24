@@ -1,0 +1,26 @@
+{
+  // Mode client - le robot se connecte au routeur cloud
+  "mode": "client",
+  "connect": {
+    "endpoints": ["tcp/serveur.cloud.com:7447"]
+  },
+  "transport": {
+    "unicast": {
+      "lowlatency": {
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "ros2dds": {
+      "ros_distro": "jazzy",
+      // Filtrer les topics pour économiser la bande passante 4G/5G
+      "pub_max_frequencies": [
+        ["*.scan.*", 2.0],
+        ["*image.*", 0.5]
+      ],
+      // Topics locaux seulement (pas envoyés sur le cloud)
+      "local_routing": ["/cmd_vel", "/odom"]
+    }
+  }
+}
