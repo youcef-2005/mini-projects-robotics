@@ -24,3 +24,15 @@ $$F_{coh, i} = k_{coh} \left( \frac{1}{|N_i|} \sum_{j \in N_i} X_j - X_i \right)
 To compute $O(N^2)$ distance checks per cycle at 20 Hz without CPU bottlenecking, the node abandons standard Python `for-loops` in favor of multidimensional `numpy` matrix broadcasting. 
 
 The entire $50$-agent swarm state is continuously published to a single `geometry_msgs/PoseArray` topic, allowing for real-time, low-latency visualization of the entire flock within RViz2.
+## 🚀 Commandes de Lancement (Instructions d'exécution)
+
+Pour visualiser la simulation de l'essaim, ouvrez deux terminaux distincts. N'oubliez pas de sourcer votre environnement (`source install/setup.bash`) dans chaque terminal.
+
+### [Terminal 1] - Lancement de la simulation Swarm
+Ce nœud calcule les comportements de séparation, d'alignement et de cohésion pour les 50 robots, et publie leurs positions à 20 Hz.
+`ros2 run mini_project_22 swarm_node`
+
+### [Terminal 2] - Lancement de la visualisation RViz2
+Affiche les robots en temps réel.
+`rviz2`
+*(Note : Dans RViz2, ajoutez un affichage "PoseArray" et écoutez le topic `/swarm_poses`).*
