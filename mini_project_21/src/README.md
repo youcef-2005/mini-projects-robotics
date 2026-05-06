@@ -29,3 +29,18 @@ $$u[k] = K_p e[k] + K_i \sum_{i=0}^{k} e[i]\Delta t + K_d \frac{e[k] - e[k-1]}{\
 
 ## Execution & Resilience
 This node is engineered as a zero-dependency, self-terminating validation script. Upon launch, it executes the control loop, printing a real-time dashboard to the console. Once the transient step-response stabilizes (at $t = 5.0\text{s}$), the system automatically shuts down the virtual physical plant. It is $100\%$ reliable out of the box.
+# 👁️ Projet 21 : Vision par Ordinateur - Détection et Suivi d'Objets
+
+## 📋 Description
+Ce package implémente un nœud ROS 2 dédié à la vision par ordinateur. Il utilise `cv_bridge` pour convertir les flux vidéo ROS (`sensor_msgs/Image`) au format OpenCV afin de détecter et suivre des objets spécifiques en temps réel.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Bibliothèques : `opencv-python`, `cv_bridge`
+
+## ⚙️ Installation & Compilation
+1. Placez ce dossier dans le répertoire `src` de votre workspace.
+2. Compilez le package :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_21
