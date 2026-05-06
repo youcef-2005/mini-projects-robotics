@@ -20,3 +20,18 @@ This ensures that the helicopter stays within its flight corridor throughout the
 * **Simulation:** Gazebo with a generic UAV/Helicopter plugin.
 * **Navigation:** Odometry-based spatial tracking.
 * **Communications:** ROS 2 Humble/Jazzy.
+# 🚀 Projet 10 : Automatisation avec Fichiers Launch
+
+## 📋 Description
+Ce package introduit l'utilisation des fichiers `launch.py`. Plutôt que de lancer chaque nœud manuellement dans un terminal différent, nous utilisons un script de lancement qui coordonne le démarrage de plusieurs nœuds simultanément, avec des configurations spécifiques.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Packages `launch` et `launch_ros`
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_10
