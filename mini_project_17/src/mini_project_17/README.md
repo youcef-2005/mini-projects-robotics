@@ -15,3 +15,18 @@ At each time step $k$, the controller solves a finite-horizon mathematical optim
 ## Technical Merits
 * **Native Implementation:** This node features a custom-built iterative solver that requires no external heavy optimization libraries (like Ipopt or CasADi), making it extremely robust and easy to deploy on embedded systems.
 * **Predictive Capability:** By considering future reference points, the robot "anticipates" curves, slowing down before sharp turns and accelerating on straight lines, resulting in much smoother motion than reactive methods.
+# 📍 Projet 17 : Système de Transformations TF2
+
+## 📋 Description
+Ce package gère les repères de coordonnées (Frames) du robot. Il permet de diffuser la position relative entre la base du robot (`base_link`) et son capteur ou son effecteur, et d'écouter ces transformations pour effectuer des calculs spatiaux.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Outils : `tf2_tools` (optionnel pour la visualisation)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans `~/ros2_ws/src/`.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_17
