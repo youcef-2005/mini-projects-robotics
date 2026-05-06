@@ -16,3 +16,18 @@ The implementation features a high-performance Raycasting engine. For every lase
 
 ## Visualization
 The resulting map is published on the `/map` topic as a `nav_msgs/OccupancyGrid`. It is fully compatible with **RViz2** and can be used as a static map for the ROS 2 Navigation Stack (Nav2).
+# 📝 Projet 14 : Logging et Diagnostic Système
+
+## 📋 Description
+Ce package illustre l'utilisation des outils de journalisation (logging) de ROS 2. Plutôt que de simples affichages, nous utilisons des niveaux de sévérité (DEBUG, INFO, WARN, ERROR, FATAL) pour surveiller l'état de santé du robot et faciliter la maintenance par l'équipe.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Outil de visualisation : `rqt_console`
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_14
