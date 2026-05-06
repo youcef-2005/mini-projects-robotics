@@ -23,3 +23,18 @@ $$V_x = K_{p, \text{linear}} \times (W_{target} - W)$$
 
 ## Mission Result
 When launched, the robot spins on its Z-axis ("Searching" mode). Once a target enters the camera frame, the robot locks onto the coordinates, centers the target, and drives forward continuously until intercept distance is reached.
+# 📢 Projet 11 : Communication par Topics (Publish/Subscribe)
+
+## 📋 Description
+Ce package illustre le mode de communication asynchrone fondamental de ROS 2. Un nœud diffuseur (Publisher) envoie des messages sur un topic, tandis qu'un nœud abonné (Subscriber) les récupère et les traite en temps réel.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Bibliothèque `std_msgs`
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_11
