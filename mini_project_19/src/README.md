@@ -31,3 +31,18 @@ $$P_{k|k} = (I - K_k H_k) P_{k|k-1}$$
 This ROS 2 node is fully self-contained. Upon execution, it dynamically simulates a robot traversing a complex trajectory, injects artificial Gaussian noise into both the internal odometry ($Q$ matrix) and the external sensor readings ($R$ matrix). It computes the massive matrix multiplications at 10 Hz. 
 
 At the end of the simulation, it outputs a quantitative analysis to the terminal, proving mathematically that the EKF reduces the tracking error by an order of magnitude compared to dead reckoning.
+# 📡 Projet 19 : Monitoring d'Obstacles et Capteurs de Distance
+
+## 📋 Description
+Ce package permet de lire et de filtrer les données provenant de capteurs de distance (Lidar ou Ultrasons). Il analyse les distances environnantes et publie une alerte si un objet se trouve trop près du robot.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Simulateur Gazebo ou un capteur physique (Lidar/HC-SR04)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans `~/ros2_ws/src/`.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_19
