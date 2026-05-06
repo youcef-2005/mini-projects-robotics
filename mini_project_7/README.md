@@ -17,3 +17,18 @@ Unlike standard nodes, this node is controlled via the ROS 2 Lifecycle CLI.
 **1. Start the Node:**
 ```bash
 ros2 run my_package industrial_sensor_lifecycle
+# 🗺️ Projet 07 : Calcul d'Odométrie et Estimation de Pose
+
+## 📋 Description
+Ce package calcule la position relative du robot dans l'espace en intégrant les données de vitesse. Il publie des messages de type `nav_msgs/Odometry` et diffuse la transformation TF entre le repère fixe `odom` et le repère mobile `base_link`.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Notions de cinématique différentielle
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_07
