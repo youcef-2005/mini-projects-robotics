@@ -26,3 +26,18 @@ $$q_{k+1} = q_k + \alpha \Delta q$$
 * **Zero-Dependency Execution:** The node contains its own internal simulation loop for an RRRR manipulator ($L_1=0.4m, L_2=0.3m, L_3=0.3m, L_4=0.2m$). It requires no physical hardware or external simulation to execute.
 * **Singularity Robustness:** By using `numpy.linalg.pinv`, the solver intrinsically handles kinematic singularities (positions where the arm loses a degree of freedom) without crashing.
 * **ROS Integration:** The computed angles are continuously broadcasted to the `/joint_states` topic, making it fully ready to drive a URDF model in `robot_state_publisher` and RViz2.
+# ⏳ Projet 18 : Actions ROS 2 - Exécution avec Feedback
+
+## 📋 Description
+Ce package implémente un système d'Action ROS 2. Contrairement aux services classiques, ce système permet de lancer une tâche asynchrone (comme un déplacement complexe), de recevoir un retour sur la progression (feedback) et d'obtenir un résultat final.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Bibliothèques de base ROS 2
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans `~/ros2_ws/src/`.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_18
