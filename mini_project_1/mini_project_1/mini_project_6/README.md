@@ -14,3 +14,18 @@ The node has two timer callbacks:
 2.  **Slow Callback:** Runs at 2 Hz (every 500ms) and includes a `time.sleep(0.4)` to simulate a heavy workload (400ms).
 
 With this implementation, the **"Fast tick"** logs are published every 50ms consistently, completely unaffected by the 400ms delays of the slow callback.
+# 🧠 Projet 06 : Machine à États Finis (FSM) pour le Contrôle Logique
+
+## 📋 Description
+Ce package implémente une machine à états finis pour coordonner les comportements complexes du robot. Il permet de passer d'un mode à un autre (ex: de la navigation vers la saisie d'objet) de manière sécurisée et ordonnée en fonction des événements extérieurs.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Notions de logique séquentielle
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_06
