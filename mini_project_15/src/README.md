@@ -25,3 +25,18 @@ To prevent particle deprivation, the algorithm draws $N$ new particles from the 
 ## Technical Merits
 * **Vectorization:** Instead of slow `for-loops` to calculate physics for 500 particles, the prediction step leverages full `numpy` array vectorization, allowing massive parallel calculations crucial for high-frequency control loops.
 * **Kidnapped Robot Recovery:** The code includes safety fallbacks to automatically re-distribute particles uniformly across the map if the sensor weights drop to zero (simulating a scenario where the robot is physically picked up and moved).
+# 📨 Projet 15 : Interfaces et Messages Personnalisés
+
+## 📋 Description
+Ce package permet de définir des types de données spécifiques pour notre équipe. Nous avons créé un message `RobotStatus` qui regroupe plusieurs informations (nom, batterie, état) dans un seul flux, optimisant ainsi la communication entre nos nœuds.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* `rosidl_default_generators`
+
+## ⚙️ Installation & Compilation
+1. Placez ce dossier dans votre workspace.
+2. Compilez (très important pour générer les fichiers C++/Python) :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_15
