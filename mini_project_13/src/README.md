@@ -20,3 +20,18 @@ Where:
 * **Zero-Dependency Testing:** To ensure maximum reliability and ease of testing, the node procedurally generates its own simulated environment (a $20\times20$ map with L-shaped walls) upon initialization. 
 * **Data Structures:** The Open List is managed using Python's `heapq` (priority queue) to guarantee $O(\log N)$ extraction of the lowest-cost node, making the algorithm highly efficient even on larger grids.
 * **Visualization:** The computed route is published as a `nav_msgs/Path`. By running `rviz2` and adding the `/costmap` and `/planned_path` topics, the optimal obstacle-avoidance trajectory can be visualized in real-time.
+# 📞 Projet 13 : Communication par Services (Client/Serveur)
+
+## 📋 Description
+Ce package démontre le mode de communication synchrone de ROS 2 via les Services. Contrairement aux topics, un service permet d'envoyer une requête spécifique et d'attendre une confirmation ou un résultat du serveur.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Interfaces de base (`example_interfaces`)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_13
