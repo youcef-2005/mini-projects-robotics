@@ -27,3 +27,17 @@ $$P_{k|k} = (I - K_k H) P_{k|k-1}$$
 
 ## Implementation Details
 Unlike standard ROS packages (`robot_localization`), this node writes the matrix multiplications manually. This provides a deep understanding of control theory and probabilistic state estimation, which is crucial for advanced industrial automation and autonomous navigation systems.
+# ⏱️ Projet 12 : Timers et Fréquences d'Exécution
+
+## 📋 Description
+Ce package montre comment gérer des tâches périodiques dans ROS 2 sans bloquer le fil principal du programme. L'utilisation des Timers permet de garantir que les boucles de contrôle du robot s'exécutent à une fréquence précise (ex: 10Hz ou 50Hz).
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_12
