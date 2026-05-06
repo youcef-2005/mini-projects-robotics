@@ -24,3 +24,18 @@ To ensure the agent doesn't get stuck in local minima during early training, an 
 
 ## Execution
 This ROS 2 node is fully self-contained. Upon initialization, it processes the $600$ training lifecycles computationally. Once convergence is achieved, it enters Execution Mode, leveraging the optimized Q-Table to navigate the maze flawlessly. The optimal learned trajectory is continuously published to the `/ai_robot_pose` topic.
+# 🦾 Projet 20 : Résolveur de Cinématique Inverse (IK Solver)
+
+## 📋 Description
+Ce package calcule les angles articulaires nécessaires pour atteindre une position cible dans l'espace cartésien. Il est optimisé pour les manipulateurs à 4 ou 6 degrés de liberté (DDL) en utilisant des bibliothèques de calcul matriciel.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Bibliothèques : `numpy`, `scipy` (optionnel)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dépôt dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_20
