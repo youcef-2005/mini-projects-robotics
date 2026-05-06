@@ -26,3 +26,17 @@ A custom proportional kinematic controller translates this 2D vector $(F_x, F_y)
 
 ## Implementation Notes
 To ensure flawless zero-dependency execution, this ROS 2 node encapsulates a built-in physics simulator. It independently updates its own Cartesian coordinates using Euler integration, allowing it to calculate forces, avoid internal arrays of obstacles, and successfully complete its mission merely by running the script.
+# ⚙️ Projet 16 : Gestion des Paramètres et Fichiers YAML
+
+## 📋 Description
+Ce package démontre l'utilisation des paramètres dynamiques dans ROS 2. Il permet de configurer le comportement du nœud (vitesse, noms, seuils) via un fichier externe YAML, facilitant ainsi les tests sans recompilation.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_16
