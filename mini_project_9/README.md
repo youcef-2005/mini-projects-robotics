@@ -20,3 +20,18 @@ The final end-effector pose relative to the base frame is obtained by multiplyin
 
 ## Industrial Application
 By structuring the code this way, the ROS 2 node becomes agnostic to the physical robot. Whether the mechanical model is built in SOLIDWORKS or Gazebo, as long as the physical lengths ($L_1 = 0.5m$, $L_2 = 0.4m$, $L_3 = 0.2m$, $L_4 = 0.1m$) match the parameters in `forward_kinematics_rrrr.py`, the spatial tracking will be mathematically perfect.
+# 🏗️ Projet 09 : Modélisation URDF et Visualisation
+
+## 📋 Description
+Ce package contient la description physique du robot au format URDF. Il définit les dimensions des segments (links) et les types d'articulations (joints), permettant ainsi à ROS 2 de calculer les transformations spatiales et de visualiser le robot en 3D.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Packages : `robot_state_publisher`, `rviz2`
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_09
