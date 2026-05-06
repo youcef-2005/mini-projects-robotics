@@ -21,3 +21,18 @@ This node can be tested directly in a Gazebo simulation (e.g., TurtleBot3, Clear
 
 ```bash
 ros2 run my_package distance_controller
+# 📉 Projet 08 : Contrôleur PID et Asservissement
+
+## 📋 Description
+Ce package implémente un algorithme de contrôle PID. Il permet de corriger l'erreur entre la position actuelle d'un moteur et sa position cible en ajustant les paramètres Proportionnel, Intégral et Dérivé pour obtenir une réponse rapide et stable.
+
+## 🛠️ Prérequis
+* ROS 2 (Humble/Iron)
+* Notions de base en automatique (Transfer functions)
+
+## ⚙️ Installation & Compilation
+1. Clonez ce dossier dans votre workspace.
+2. Compilez :
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select mini_project_08
